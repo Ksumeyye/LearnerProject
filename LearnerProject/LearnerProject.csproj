@@ -146,6 +146,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
+    <Compile Include="Models\CourseReviewViewModel.cs" />
     <Compile Include="Models\Entities\About.cs" />
     <Compile Include="Models\Entities\Admin.cs" />
     <Compile Include="Models\Entities\Banner.cs" />
@@ -500,6 +501,7 @@
     <Content Include="Views\TeacherCourse\AddCourse.cshtml" />
     <Content Include="Views\TeacherCourse\UpdateCourse.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
+    <Content Include="Views\Default\DefaultCoursePartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
