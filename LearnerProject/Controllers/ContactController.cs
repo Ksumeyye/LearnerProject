@@ -1,0 +1,43 @@
+﻿using LearnerProject.Models.Context;
+using LearnerProject.Models.Entities;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+
+namespace LearnerProject.Controllers
+{
+    public class ContactController : Controller
+    {
+        // GET: Contact
+
+        LearnerContext context = new LearnerContext();
+        public ActionResult Index()
+        {
+            return View();
+        }
+
+        public PartialViewResult ContactInfo()
+        {
+            var values = context.Contacts.ToList();
+            return PartialView(values);
+        }
+
+        [HttpGet]
+        public PartialViewResult SendMessage()
+        {
+            return PartialView();
+        }
+
+        [HttpPost]
+        public ActionResult SendMessage(Message message)
+        {
+
+            message.IsRead = true;
+            context.Messages.Add(message);
+            context.SaveChanges();
+            return RedirectToAction("Index");
+        }
+    }
+}
