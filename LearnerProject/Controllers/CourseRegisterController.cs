@@ -29,9 +29,8 @@ namespace LearnerProject.Controllers
             string student = Session["studentName"].ToString();
             courseRegister.StudentId=context.Students.Where(x=>x.NameSurname==student).Select(x=>x.StudentId).FirstOrDefault();
             context.CourseRegisters.Add(courseRegister);
-
-
-            return View();
+            context.SaveChanges();
+            return RedirectToAction("Index","StudentCourse");
         }
     }
 }

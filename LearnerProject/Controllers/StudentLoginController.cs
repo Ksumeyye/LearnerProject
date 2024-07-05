@@ -20,17 +20,23 @@ namespace LearnerProject.Controllers
         public ActionResult Index(Student student)
         {
             var values = context.Students.FirstOrDefault(x => x.UserName == student.UserName && x.Password == student.Password);
-            if (values == null)
-            {
-                ModelState.AddModelError("", "Kullanıcı Adı veya Şifre Hatalı");
-                return View();
-            }
-            else
+            if (values != null)
             {
                 FormsAuthentication.SetAuthCookie(values.UserName, false);
                 Session["studentName"] = values.NameSurname;
-                return RedirectToAction("Index", "CourseRegister");
+                return RedirectToAction("Index", "StudentCourse");
             }
+            else
+            {
+                ModelState.AddModelError("", "Kullanıcı Adı veya Şifre Hatalıdır.");
+                return View();
+            }
+        }
+        public ActionResult Logout()
+        {
+            FormsAuthentication.SignOut();
+            Session.Abandon();
+            return RedirectToAction("Index", "Default");
         }
     }
 }
