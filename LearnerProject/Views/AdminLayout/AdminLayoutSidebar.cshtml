@@ -1,15 +1,15 @@
 ﻿<div class="sidebar pe-4 pb-3">
     <nav class="navbar bg-light navbar-light">
         <a href="index.html" class="navbar-brand mx-4 mb-3">
-            <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>DASHMIN</h3>
+            <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>AdminPanel</h3>
         </a>
         <div class="d-flex align-items-center ms-4 mb-4">
             <div class="position-relative">
-                <img class="rounded-circle" src="~/Templates/dashmin-1.0.0/img/user.jpg" alt="" style="width: 40px; height: 40px;">
+                <img class="rounded-circle" src="https://i.hizliresim.com/59dc3lh.png" alt="" style="width: 40px; height: 40px;">
                 <div class="bg-success rounded-circle border border-2 border-white position-absolute end-0 bottom-0 p-1"></div>
             </div>
             <div class="ms-3">
-                <h6 class="mb-0">Jhon Doe</h6>
+                <h6 class="mb-0">@Session["adminName"]</h6>
                 <span>Admin</span>
             </div>
         </div>
@@ -17,6 +17,14 @@
             <a href="index.html" class="nav-item nav-link"><i class="fa fa-tachometer-alt me-2"></i>Dashboard</a>
             <a href="/Category/Index" class="nav-item nav-link"><i class="fa fa-list me-2"></i>Kategoriler</a>
             <a href="/AdminCourse/Index" class="nav-item nav-link"><i class="fa fa-language"></i>Kurslar</a>
+            <a href="/AdminAbout/Index" class="nav-item nav-link"><i class="fa fa-eye"></i>Hakkımızda</a>
+            <a href="/AdminTeacher/Index" class="nav-item nav-link"><i class="fa fa-users me-2"></i>Eğitmenler</a>
+            <a href="/AdminClassroom/Index" class="nav-item nav-link"><i class="fa fa-crosshairs"></i>Sınıflar</a>
+            <a href="/Review/Index" class="nav-item nav-link"><i class="fa fa-comments me-2"></i>Yorumlar</a>
+            <a href="/AdminFaq/Index" class="nav-item nav-link"><i class="fa fa-question me-2" aria-hidden="true"></i>Sık Sorulanlar</a>
+            <a href="/AdminSendMessage/Index" class="nav-item nav-link"><i class="fa fa-envelope"></i>Gelen Mesajlar</a>
+            <a href="/AdminSocialMedia/Index" class="nav-item nav-link"><i class="fa fa-hashtag"></i>SosyalMedya</a>
+            <a href="/AdminContact/Index" class="nav-item nav-link"><i class="fa fa-phone me-2"></i>İletişim</a>
         </div>
     </nav>
 </div>
