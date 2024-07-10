@@ -1,4 +1,5 @@
 ﻿using LearnerProject.Models.Context;
+using LearnerProject.Models.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,9 @@ namespace LearnerProject.Controllers
         LearnerContext context = new LearnerContext();
         public ActionResult Index()
         {
+            
+            string adminName = Session["adminName"].ToString();
+            var admin=context.Admins.Where(x=>x.NameSurname == adminName).Select(x=>x.AdminId).FirstOrDefault();
             ViewBag.v1 = context.Courses.Count();
             ViewBag.v2=context.Categories.Count();
             ViewBag.v3 = context.Classrooms.Count();

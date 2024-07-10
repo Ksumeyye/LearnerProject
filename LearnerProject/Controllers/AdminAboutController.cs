@@ -16,13 +16,14 @@ namespace LearnerProject.Controllers
 
         public ActionResult Index()
         {
-            
-            return View();
+            var values = context.Abouts.Where(x => x.Status == true).ToList();
+            return View(values);
         }
 
         public ActionResult DeleteAbout(int id)
         {
-            var value = context.Abouts.Find(id);         
+            var value = context.Abouts.Find(id);
+            value.Status = false;
             context.SaveChanges();
             return RedirectToAction("Index");
         }
@@ -36,6 +37,7 @@ namespace LearnerProject.Controllers
         [HttpPost]
         public ActionResult AddAbout(About about)
         {
+            about.Status = true;
             context.Abouts.Add(about);
             context.SaveChanges();
             return RedirectToAction(nameof(Index));
@@ -57,6 +59,7 @@ namespace LearnerProject.Controllers
             value.Description = about.Description;
             value.ImageUrl = about.ImageUrl;
             value.Item1 = about.Item1;
+            value.Status = true;
             context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }

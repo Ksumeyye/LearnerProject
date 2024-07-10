@@ -128,6 +128,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminAboutController.cs" />
+    <Compile Include="Controllers\AdminClassroomController.cs" />
     <Compile Include="Controllers\AdminCourseController.cs" />
     <Compile Include="Controllers\AdminDashboardController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
@@ -151,6 +152,14 @@
     <Compile Include="Migrations\202406051902475_initial.cs" />
     <Compile Include="Migrations\202406051902475_initial.Designer.cs">
       <DependentUpon>202406051902475_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407100901510_DeleteItem2AndItem3ColumnInAboutsTable.cs" />
+    <Compile Include="Migrations\202407100901510_DeleteItem2AndItem3ColumnInAboutsTable.Designer.cs">
+      <DependentUpon>202407100901510_DeleteItem2AndItem3ColumnInAboutsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407100907212_CreateStatusColumnInAboutsTable.cs" />
+    <Compile Include="Migrations\202407100907212_CreateStatusColumnInAboutsTable.Designer.cs">
+      <DependentUpon>202407100907212_CreateStatusColumnInAboutsTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
@@ -524,6 +533,9 @@
     <Content Include="Views\AdminAbout\AddAbout.cshtml" />
     <Content Include="Views\AdminAbout\Index.cshtml" />
     <Content Include="Views\AdminAbout\UpdateAbout.cshtml" />
+    <Content Include="Views\AdminClassroom\Index.cshtml" />
+    <Content Include="Views\AdminClassroom\AddClassroom.cshtml" />
+    <Content Include="Views\AdminClassroom\UpdateClassroom.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -559,6 +571,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202406051902475_initial.resx">
       <DependentUpon>202406051902475_initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407100901510_DeleteItem2AndItem3ColumnInAboutsTable.resx">
+      <DependentUpon>202407100901510_DeleteItem2AndItem3ColumnInAboutsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407100907212_CreateStatusColumnInAboutsTable.resx">
+      <DependentUpon>202407100907212_CreateStatusColumnInAboutsTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

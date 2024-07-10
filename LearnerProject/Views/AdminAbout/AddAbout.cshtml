@@ -9,7 +9,7 @@
 
 <form method="post">
     <label>Başlık</label>
-    @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "Uygun başlık giriniz." })
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control", @placeholder = "Uygun başlık giriniz" })
     <br />
     <label>Resim URL</label>
     @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", @placeholder = "Uygun resim url giriniz" })
@@ -20,5 +20,5 @@
     <label>Açıklama</label>
     @Html.TextAreaFor(x => x.Description, 5, 1, new { @class = "form-control", @placeholder = "Uygun açıklama metni giriniz" })
     <br />
-    <button class="btn btn-outline-primary"><i class="fas fa-save"></i>Kaydet</button>
+    <button class="btn btn-outline-primary"><i class="fas fa-save"></i> Kaydet</button>
 </form>
