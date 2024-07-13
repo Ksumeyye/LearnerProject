@@ -1,0 +1,40 @@
+﻿@model List<LearnerProject.Models.Entities.Teacher>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Eğitmenler Sayfası</h3>
+@{ 
+    int count = 0;
+}
+<table class="table table-bordered table-hover"
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Kullanıcı Adı</th>
+        <th>Şifre</th>
+        <th>İşlemler</th>
+    </tr>
+
+@foreach (var item in Model)
+{
+    count++;
+    <tr>
+        <td>@count</td>
+        <td>@item.NameSurname</td>
+        <td>@item.UserName</td>
+        <td>@item.Password</td>
+
+        <td>
+            <a href="/AdminTeacher/DeleteTeacher/@item.TeacherId"class="btn btn-outline-danger"><i class="fa fa-trash"></i> Eğitmeni Sil</a>
+            <a href="/AdminTeacher/UpdateTeacher/@item.TeacherId" class="btn btn-outline-info"><i class="fa fa-pen"></i> Güncelle</a>
+        </td>
+    </tr>
+    }
+    </table>
+<br/>
+<a href="/AdminTeacher/AddTeacher" class="btn btn-outline-success">Yeni Eğitmen Ekle</a>
+
+
+

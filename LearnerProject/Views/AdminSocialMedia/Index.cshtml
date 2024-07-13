@@ -1,0 +1,44 @@
+﻿﻿@model List <LearnerProject.Models.SocialMedia>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<br />
+<h3>Sosyal Medyalar Sayfası</h3>
+@{
+    int count = 0;
+}
+<br />
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Sosyal Medya Adı</th>
+        <th>Sosyal Medya Url</th>
+        <th>Icon</th>
+        <th>Durum</th>
+        <th>İşlemler</th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.SocialMediaName</td>
+            <td>@item.SocialMediaUrl</td>
+            <td>@item.Icon</td>
+            <td>@( item.Status == true ? "Aktif" : "Pasif" )</td>
+
+            <td>
+                <a href="/AdminSocialMedia/UpdateSocialMedia/@item.SocialMediaId" class="btn btn-outline-info"><i class="fa fa-pen"></i> Güncelle</a>
+                <a href="/AdminSocialMedia/MakeActive/@item.SocialMediaId" class="btn btn-outline-success">Aktif</a>
+                <a href="/AdminSocialMedia/MakePassive/@item.SocialMediaId" class="btn btn-outline-dark">Pasif</a>
+                <a href="/AdminSocialMedia/DeleteSocialMedia/@item.SocialMediaId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Sosyal Medya Hesabını Sil</a>
+            </td>
+
+        </tr>
+    }
+</table>
+<br />
+<a href="/AdminSocialMedia/AddSocialMedia" class="btn btn-outline-success">Yeni Sosyal Medya Hesabı Ekle</a>

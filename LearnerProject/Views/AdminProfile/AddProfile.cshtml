@@ -1,0 +1,22 @@
+﻿@model LearnerProject.Models.Entities.Admin
+@{
+    ViewBag.Title = "AddProfile";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Profil Ekle</h2>
+<form method="post">
+    <label>Profil Resmi</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new {@class="form-control", @placeholder="Profil resmi giriniz"})
+    <br/>
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new {@class="form-control",@placeholder="Ad soyad giriniz"})
+    <br/>
+    <label>Kullanıcı Adı</label>
+    @Html.TextBoxFor(x => x.UserName, new {@class="form-control",@placeholder="Kullanıcı adı giriniz"})
+    <br/>
+    <label>Şifre</label>
+    @Html.TextBoxFor(x => x.Password, new {@class="form-control",@placeholder="Şifre giriniz"})
+    <br/>
+    <button class="btn btn-outline-success"><i class="fas fa-save"></i> Kaydet</button>
+</form>

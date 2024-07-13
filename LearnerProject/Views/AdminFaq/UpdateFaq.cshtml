@@ -1,0 +1,22 @@
+﻿@model LearnerProject.Models.Entities.FAQ
+@{
+    ViewBag.Title = "UpdateFaq";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<br />
+<h2>Sık Sorulanlar Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.FAQId)
+    <label>Resim Url</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", @placeholder = "Resim Url giriniz" })
+    <br />
+    <label>Soru</label>
+    @Html.TextBoxFor(x => x.Question, new { @class = "form-control", @placeholder = "Kurslar hakkında soru giriniz" })
+    <br />
+    <label>Açıklama</label>
+    @Html.TextAreaFor(x => x.Answer, 5, 1, new { @class = "form-control", @placeholder = "Cevap giriniz" })
+    <br />
+
+    <button class="btn btn-outline-success"><i class="fas fa-save"></i> Kaydet</button>
+</form>

@@ -1,0 +1,39 @@
+﻿@model List<LearnerProject.Models.Entities.Message>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h3>Gelen Mesajlar Sayfası</h3>
+@{ 
+    int count = 0;
+}
+<br/>
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>E-mail</th>
+        <th>Mesaj Konusu</th>
+        <th>Mesaj İçeriği</th>
+        <th>Durum</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+            {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td>@item.NameSurname</td>
+            <td>@item.Email</td>
+            <td>@item.Subject</td>
+            <td>@(item.MessageContent.Length>50 ? item.MessageContent.Substring(0,50): item.MessageContent)</td>
+            <td>@(item.IsRead==true? "Okunmadı" : "Okundu")</td>
+            <td>
+                <a href="/AdminSendMessage/DeleteSendMessage/@item.MessageId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Mesajı Sil</a>
+                <a href="/AdminSendMessage/IsNotRead/@item.MessageId" class="btn btn-outline-primary"><i class="fa fa-eye"></i> Okunmadı</a>
+                <a href="/AdminSendMessage/IsRead/@item.MessageId" class="btn btn-outline-success"><i class="fa fa-eye"></i> Okundu</a>
+            </td>
+        </tr>
+            }
+</table>

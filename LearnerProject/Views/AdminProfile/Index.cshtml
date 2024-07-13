@@ -1,0 +1,37 @@
+﻿@model List<LearnerProject.Models.Entities.Admin>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Profilim</h2>
+@{ 
+    int count = 0;
+}
+<table class="table table-bordered table-hover">
+    <tr>
+        <th>#</th>
+        <th>Profil</th>
+        <th>Ad Soyad</th>
+        <th>Kullanıcı Adı</th>
+        <th>Şifre</th>
+        <th>İşlemler</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        count++;
+        <tr>
+            <td>@count</td>
+            <td><img src="@item.ImageUrl" style="height:50px; width:50px"/></td>
+            <td>@item.NameSurname</td>
+            <td>@item.UserName</td>
+            <td>@item.Password</td>
+
+            <td>
+                <a href="/AdminProfile/DeleteProfile/@item.AdminId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Profil Sil</a>
+                <a href="/AdminProfile/UpdateProfile/@item.AdminId" class="btn btn-outline-info"><i class="fa fa-pen"></i> Güncelle </a>
+            </td>
+        </tr>
+    }
+</table>
+<a href="~/AdminProfile/AddProfile" class="btn btn-outline-success"> Profil Ekle</a>

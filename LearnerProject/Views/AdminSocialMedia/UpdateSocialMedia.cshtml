@@ -1,0 +1,20 @@
+﻿@model LearnerProject.Models.SocialMedia
+@{
+    ViewBag.Title = "UpdateSocialMedia";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Sosyal Medya Hesabı Güncelle</h2>
+<form method="post">
+    @Html.HiddenFor(x => x.SocialMediaId)
+    <label>Sosyal Medya Adı</label>
+    @Html.TextBoxFor(x => x.SocialMediaName, new { @class = "form-control", @placeholder = "Sosyal medya adı giriniz" })
+    <br />
+    <label>Sosyal Medya Url</label>
+    @Html.TextBoxFor(x => x.SocialMediaUrl, new { @class = "form-control", @placeholder = "Sosyal medya url giriniz" })
+    <br />
+    <label>Icon</label>
+    @Html.TextBoxFor(x => x.Icon, new { @class = "form-control", @placeholder = "İkon giriniz" })
+    <br />
+    <button class="btn btn-outline-primary"><i class="fas fa-save"></i>Kaydet</button>
+</form>
