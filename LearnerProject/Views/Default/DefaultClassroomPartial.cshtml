@@ -1,0 +1,32 @@
+﻿@model List<LearnerProject.Models.Entities.Classroom>
+<div class="untree_co-section">
+    <div class="container">
+        <div class="row justlify-content-center mb-md-7">
+            <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="0">
+                <h2 class="line-bottom text-right mb-4">Sınıflar</h2>
+                
+            </div>
+        </div>
+
+        <div class="col-lg-3" data-aos="fade-up" data-aos-delay="0">
+            <figure class="img-wrap-2">
+                <img src="https://pedagoo.com/wp-content/uploads/2020/06/2250x1500_czy-warto-korzystac-ze-szkolen-online-ollh.jpg" alt="Image" class="img-fluid">
+                <div class="dotted"></div>
+            </figure>
+
+        </div>
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature">
+                        <span class="@item.Icon"></span>
+                        <h3>@item.Name</h3>
+                        <p>@item.Description</p>
+                    </div>
+                </div>
+            }
+        </div>
+
+    </div>
+</div>

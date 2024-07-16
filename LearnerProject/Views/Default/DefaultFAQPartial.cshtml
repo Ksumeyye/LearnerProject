@@ -1,0 +1,42 @@
+﻿﻿@model List<LearnerProject.Models.Entities.FAQ>
+
+
+<div class="untree_co-section">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mr-auto mb-5 mb-lg-0" data-aos="fade-up" data-aos-delay="0">
+                <img src="~/Templates/learner-1.0.0/images/img-school-5-min.jpg" alt="image" class="img-fluid" style="height:500px; width:700px;">
+            </div>
+            <div class="col-lg-6 ml-auto" data-aos="fade-up" data-aos-delay="100">
+                <h3 class="line-bottom mb-4">Sıkça Sorulan Sorular</h3>
+                <p>Online Platformumuz ve kurslarımız hakkında daha detaylı bilgilere ulaşabilmeniz için aşağıdaki sıkça sorulan sorulara göz gezdirebilirsiniz.</p>
+
+                <div class="custom-accordion" id="accordion_1">
+                    @foreach (var item in Model)
+                    {
+                        
+                        <div class="accordion-item">
+                            <h2 class="mb-0">
+                                <button class="btn btn-link" type="button" data-toggle="collapse"  aria-expanded="false" >@item.Question</button>
+                            </h2>
+                            <div class="collapse" aria-labelledby="headingOne" data-parent="#accordion_1">
+                                <div class="accordion-body">
+                                    <div class="d-flex">
+                                        <div class="accordion-img mr-4">
+                                            <img src="@item.ImageUrl" alt="Image" class="img-fluid">
+                                        </div>
+                                        <div>
+                                            <p>@item.Answer</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

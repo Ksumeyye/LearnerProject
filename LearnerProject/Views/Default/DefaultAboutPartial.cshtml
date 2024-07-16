@@ -1,0 +1,10 @@
+﻿﻿@model List<LearnerProject.Models.Entities.About>
+
+@foreach (var item in Model)
+{
+    <h2 class="line-bottom mb-4" data-aos="fade-up" data-aos-delay="0">@item.Title</h2>
+    <p data-aos="fade-up" data-aos-delay="100">@item.Description</p>
+    <ul class="list-unstyled ul-check mb-5 primary" data-aos="fade-up" data-aos-delay="200">
+        <li>@item.Item1</li>
+    </ul>
+}

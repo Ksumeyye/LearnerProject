@@ -78,5 +78,62 @@ namespace LearnerProject.Controllers
             context.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult CourseVideo(Teacher teacher)
+        {
+
+            string name = Session["teacherName"].ToString();
+            var values = context.CourseVideos.Where(x => x.Teacher.NameSurname == name).ToList();
+
+            return View(values);
+        }
+        [HttpGet]
+        public ActionResult AddCourseVideo()
+        {
+            string name = Session["teacherName"].ToString();
+            var courses = context.Courses.Where(x => x.Teacher.NameSurname == name).ToList();
+            List<SelectListItem> coursesList = (from x in courses
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.CourseName,
+                                                   Value = x.CourseId.ToString()
+                                               }).ToList();
+            ViewBag.course = coursesList;
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddCourseVideo(CourseVideo courseVideo)
+        {
+            string name = Session["teacherName"].ToString();
+            courseVideo.TeacherId = context.Teachers.Where(x => x.NameSurname == name).Select(x => x.TeacherId).FirstOrDefault();
+            context.CourseVideos.Add(courseVideo);
+            context.SaveChanges();
+            return RedirectToAction("CourseVideo", "TeacherCourse");
+        }
+        public ActionResult DeleteCourseVideo(int id)
+        {
+            var values = context.CourseVideos.Find(id);
+            context.CourseVideos.Remove(values);
+            context.SaveChanges();
+            return RedirectToAction("CourseVideo", "TeacherCourse");
+        }
+        public ActionResult CourseReview(Teacher teacher)
+        {
+            string name = Session["teacherName"].ToString();
+            var courses=context.Courses.Where(t=>t.Teacher.NameSurname==name).ToList();
+            var reviews = new List<Review>();
+            foreach(var course in courses)
+            {
+                var courseReviews = context.Reviews.Where(z => z.CourseId == course.CourseId).ToList();
+                reviews.AddRange(courseReviews);
+            }
+            return View(reviews);
+        }
+        public ActionResult DeleteTeacherCourseReview(int id)
+        {
+            var value = context.Reviews.Find(id);
+            context.Reviews.Remove(value);
+            context.SaveChanges();
+            return RedirectToAction("CourseReview");
+        }
     }
 }

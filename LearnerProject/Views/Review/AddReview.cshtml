@@ -7,7 +7,7 @@
 <h2>Yorum Düzeltme Ekle</h2>
 <form method="post">
     @Html.DropDownListFor(x=>x.CourseId,(List<SelectListItem>)ViewBag.course,"Kursu Seç", new {@class="form-control mb-3"})
-    @Html.TextBoxFor(x=> x.Comment, new {@class="form-control mb-3",@placeholder="Yorum",style="width:max; height:200px;"})
+    @Html.TextAreaFor(x=> x.Comment, new {@class="form-control mb-3",@placeholder="Yorum",style="width:max; height:200px;"})
     @Html.DropDownListFor(x=>x.StudentId,(List<SelectListItem>)ViewBag.student,"Öğrenci Seç",new {@class="form-control mb-3"})
 
     <button class="btn btn-outline-success"><i class="fas fa-save"> Kaydet</i></button>

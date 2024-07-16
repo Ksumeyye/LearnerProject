@@ -8,10 +8,18 @@ namespace LearnerProject.Controllers
 {
     public class TeacherLayoutController : Controller
     {
-        // GET: TeacherLayout
+        
         public ActionResult Index()
         {
             return View();
+        }
+        public PartialViewResult TeacherLayoutHead()
+        {
+            return PartialView();
+        }
+        public PartialViewResult TeacherLayoutSideBar()
+        {
+            return PartialView();
         }
     }
 }

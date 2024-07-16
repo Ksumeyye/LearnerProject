@@ -1,0 +1,36 @@
+﻿﻿@model List<LearnerProject.Models.Entities.Teacher>
+
+
+<div class="services-section">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-lg-5 mb-5 mb-lg-0">
+
+                <div class="section-title mb-3" data-aos="fade-up" data-aos-delay="0">
+                    <h2 class="line-bottom mb-4">Alanında Uzman Eğitmenlerimiz</h2>
+                </div>
+
+                <p data-aos="fade-up" data-aos-delay="100">Learner'da eğitmenler kendi alanlarında uzmanlaşmış, öğretmeye hevesli, öğrencilere değer veren kişilerdir.</p>
+                <br />
+                @foreach (var item in Model)
+                {
+                   <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                       <div class="feature">
+                           <span class="@item.UserName"></span>
+                           <h3>@item.NameSurname</h3>
+                       </div>
+                   </div>
+                }
+
+            </div>
+
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
+                <figure class="img-wrap-2">
+                    <img src="https://www.a3haber.com/wp-content/uploads/2020/08/20200317015051_5e70ab8b25991.jpg" alt="Image" class="img-fluid">
+                    <div class="dotted"></div>
+                </figure>
+
+            </div>
+        </div>
+    </div>
+</div>

@@ -14,7 +14,7 @@
     <meta content="" name="description">
 
     <!-- Favicon -->
-    <link href="img/favicon.ico" rel="icon">
+    <link href="~/Templates/dashmin-1.0.0/img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -49,7 +49,7 @@
         <div class="sidebar pe-4 pb-3">
             <nav class="navbar bg-light navbar-light">
                 <a href="index.html" class="navbar-brand mx-4 mb-3">
-                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>LEARNER</h3>
+                    <h3 class="text-primary"><i class="fa fa-hashtag me-2"></i>Dashmin</h3>
                 </a>
                 <div class="d-flex align-items-center ms-4 mb-4">
                     <div class="position-relative">
@@ -64,8 +64,8 @@
                 <div class="navbar-nav w-100">
                     
                             <a href="/TeacherCourse/Index/" class="nav-item nav-link"><i class="fa fa-th me-2"></i>Kurslarım</a>
-                            <a href="/TeacherCourse/CourseReview/" class="nav-item nav-link"><i class="fa fa-keyboard"></i>Yapılan Yorumlar</a>
-                            <a href="/TeacherCourse/CourseVideo/" class="nav-item nav-link"><i class="fa fa-webhook"></i>Kurs İçerikleri</a>
+                            <a href="/TeacherCourse/CourseReview/" class="nav-item nav-link"><i class="fa fa-keyboard"></i>Yorumlar</a>
+                            <a href="/TeacherCourse/CourseVideo/" class="nav-item nav-link"><i class="fa fa-star"></i>Kurs İçerikleri</a>
                         </div>
                       </nav>
                     </div>
@@ -89,12 +89,10 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                             <img class="rounded-circle me-lg-2" src="https://cdn-icons-png.flaticon.com/512/9187/9187604.png" alt="" style="width: 40px; height: 40px;">
-                            <span class="d-none d-lg-inline-flex">@Session["teacherName"]</span>
+                            <span class="d-none d-lg-inline-flex"> @Session["teacherName"]</span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end bg-light border-0 rounded-0 rounded-bottom m-0">
-                            <a href="#" class="dropdown-item">My Profile</a>
-                            <a href="#" class="dropdown-item">Settings</a>
-                            <a href="#" class="dropdown-item">Log Out</a>
+                            <a href="/TeacherLogin/LogOut" class="dropdown-item">Çıkış Yap</a>
                         </div>
                     </div>
                 </div>
