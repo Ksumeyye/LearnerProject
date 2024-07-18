@@ -141,6 +141,7 @@
     <Compile Include="Controllers\AdminTeacherController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
     <Compile Include="Controllers\CourseRegisterController.cs" />
     <Compile Include="Controllers\DefaultController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -169,6 +170,10 @@
     <Compile Include="Migrations\202407100907212_CreateStatusColumnInAboutsTable.cs" />
     <Compile Include="Migrations\202407100907212_CreateStatusColumnInAboutsTable.Designer.cs">
       <DependentUpon>202407100907212_CreateStatusColumnInAboutsTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202407181238461_CreateBranchColumnInTeachersTable.cs" />
+    <Compile Include="Migrations\202407181238461_CreateBranchColumnInTeachersTable.Designer.cs">
+      <DependentUpon>202407181238461_CreateBranchColumnInTeachersTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
@@ -576,6 +581,8 @@
     <Content Include="Views\Default\DefaultFAQPartial.cshtml" />
     <Content Include="Views\Default\DefaultClassroomPartial.cshtml" />
     <Content Include="Views\Default\DefaultTeacherPartial.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\Course\CourseInformation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -616,6 +623,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407100907212_CreateStatusColumnInAboutsTable.resx">
       <DependentUpon>202407100907212_CreateStatusColumnInAboutsTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407181238461_CreateBranchColumnInTeachersTable.resx">
+      <DependentUpon>202407181238461_CreateBranchColumnInTeachersTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

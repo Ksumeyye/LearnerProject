@@ -1,0 +1,48 @@
+﻿@model List<LearnerProject.Models.Entities.Course>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+<div class="untree_co-hero overlay" style="background-image: url('/Templates/learner-1.0.0/images/img-school-2-min.jpg');">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-12">
+                <div class="row justify-content-center ">
+                    <div class="col-lg-6 text-center ">
+                        <h1 class="mb-4 heading text-white" data-aos="fade-up" data-aos-delay="100">Tüm Kurslar</h1>
+                        <div class="mb-5 text-white desc mx-auto" data-aos="fade-up" data-aos-delay="200">
+                            <p>Alanında Uzman Eğitmenler Tarafından Hazırlanan Kurslarımızı İnceleyebilirsiniz.</p>
+                        </div>
+
+                        <p class="mb-0" data-aos="fade-up" data-aos-delay="300"><a href="#" onclick="scrollToCourse()" class="btn btn-secondary">Tüm Kurslar</a></p>
+
+                        <script>
+                            function scrollToCourse() {
+                                var contactSection = document.getElementById('course');
+                                contactSection.scrollIntoView({ behavior: 'smooth' });
+                            }
+                        </script>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div> 
+
+</div> 
+<div class="untree_co-section" id="course">
+    <div class="container">
+
+        <div class="mb-3">
+
+            @Html.Action("CourseInformation")
+        </div>
+
+
+    </div>
+</div> <!-- /.untree_co-section -->
