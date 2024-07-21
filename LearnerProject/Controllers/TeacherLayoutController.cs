@@ -13,13 +13,5 @@ namespace LearnerProject.Controllers
         {
             return View();
         }
-        public PartialViewResult TeacherLayoutHead()
-        {
-            return PartialView();
-        }
-        public PartialViewResult TeacherLayoutSideBar()
-        {
-            return PartialView();
-        }
     }
 }

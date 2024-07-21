@@ -3,34 +3,35 @@
 
 <div class="services-section">
     <div class="container">
-        <div class="row justify-content-between">
-            <div class="col-lg-5 mb-5 mb-lg-0">
+        <div class="row justify-content-center"
+        <div class="row justify-content-center ">
 
-                <div class="section-title mb-3" data-aos="fade-up" data-aos-delay="0">
-                    <h2 class="line-bottom mb-4">Alanında Uzman Eğitmenlerimiz</h2>
-                </div>
+        <div class="col-lg-7 text-center" data-aos="fade-up" data-aos-delay="100">
+        <h2 class="line-bottom mb-4">Alanlarında Uzman Eğitmenlerimiz</h2>
 
-                <p data-aos="fade-up" data-aos-delay="100">Learner'da eğitmenler kendi alanlarında uzmanlaşmış, öğretmeye hevesli, öğrencilere değer veren kişilerdir.</p>
-                <br />
-                @foreach (var item in Model)
-                {
-                   <div class="col-6 col-sm-6 col-md-6 col-lg-6" data-aos="fade-up" data-aos-delay="100">
-                       <div class="feature">
-                           <h3>@item.NameSurname</h3>
-                           <div class="text-bg-dark"> Branş: <span>@item.Branch</span></div>
-                       </div>
-                   </div>
-                }
+        </div>
 
+        <p data-aos="fade-up" data-aos-delay="100">Learner'da eğitmenler kendi alanlarında uzmanlaşmış ve öğretmeye heveslidirler.  Eğitimlerimizde görev alacak eğitmenlerimiz. </p>
+        <br />
+        @foreach (var item in Model)
+        {
+            <div class="col-6 col-sm-6 col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <a href="#" class="teacher d-flex align-items-start h-100">
+            <div class="team-item">
+            <div class="team-img">
+            <img src="@item.ImageUrl" alt="Image">
             </div>
-
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="0">
-                <figure class="img-wrap-2">
-                    <img src="~/Templates/learner-1.0.0/images/teacher-min.jpg" alt="Image" class="img-fluid">
-                    <div class="dotted"></div>
-                </figure>
-
+            <div class="feature">
+            <h3>@item.NameSurname</h3>
+            <div class="text-bg-dark"><span>@item.Branch</span></div>
             </div>
+            </div>
+            </a>
+            </div>
+        }
+
+        </div>
         </div>
     </div>
 </div>
+

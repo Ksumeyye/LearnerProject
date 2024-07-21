@@ -48,6 +48,8 @@ namespace LearnerProject.Controllers
             value.NameSurname = teacher.NameSurname;
             value.UserName = teacher.UserName;
             value.Password= teacher.Password;
+            value.ImageUrl = teacher.ImageUrl;
+            value.Branch = teacher.Branch;
             context.SaveChanges();
             return RedirectToAction(nameof(Index));
         }

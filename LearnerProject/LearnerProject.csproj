@@ -175,6 +175,10 @@
     <Compile Include="Migrations\202407181238461_CreateBranchColumnInTeachersTable.Designer.cs">
       <DependentUpon>202407181238461_CreateBranchColumnInTeachersTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202407211838239_CreateImageUrlColumnInTeachersTable.cs" />
+    <Compile Include="Migrations\202407211838239_CreateImageUrlColumnInTeachersTable.Designer.cs">
+      <DependentUpon>202407211838239_CreateImageUrlColumnInTeachersTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Context\LearnerContext.cs" />
     <Compile Include="Models\CourseReviewViewModel.cs" />
@@ -626,6 +630,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202407181238461_CreateBranchColumnInTeachersTable.resx">
       <DependentUpon>202407181238461_CreateBranchColumnInTeachersTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202407211838239_CreateImageUrlColumnInTeachersTable.resx">
+      <DependentUpon>202407211838239_CreateImageUrlColumnInTeachersTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

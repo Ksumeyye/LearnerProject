@@ -18,9 +18,9 @@ namespace LearnerProject.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult Index(Teacher teacher) 
+        public ActionResult Index(Teacher teacher)
         {
-            var values = context.Teachers.FirstOrDefault(x => x.UserName == teacher.UserName&& x.Password==teacher.Password);
+            var values = context.Teachers.FirstOrDefault(x => x.UserName == teacher.UserName && x.Password == teacher.Password);
             if (values == null)
             {
                 ModelState.AddModelError("", "Kullanıcı Adı veya Şifre Hatalı");
@@ -29,9 +29,15 @@ namespace LearnerProject.Controllers
             else
             {
                 FormsAuthentication.SetAuthCookie(values.UserName, false);
-                Session["teacherName"]=values.NameSurname;
-                return RedirectToAction("Index","TeacherCourse");
+                Session["teacherName"] = values.NameSurname;
+                return RedirectToAction("Index", "TeacherCourse");
+            }
+        }
+            public ActionResult Logout()
+            {
+                FormsAuthentication.SignOut();
+                Session.Abandon();
+                return RedirectToAction("Index", "Default");
             }
         }
     }
-}

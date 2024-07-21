@@ -11,9 +11,11 @@
 <table class="table table-bordered table-hover"
     <tr>
         <th>#</th>
+        <th>Profil</th>
         <th>Ad Soyad</th>
         <th>Kullanıcı Adı</th>
         <th>Şifre</th>
+        <th>Branş</th>
         <th>İşlemler</th>
     </tr>
 
@@ -22,12 +24,14 @@
     count++;
     <tr>
         <td>@count</td>
+        <td><img src="@item.ImageUrl" style="height:50px; width:50px" /></td>
         <td>@item.NameSurname</td>
         <td>@item.UserName</td>
         <td>@item.Password</td>
+        <td>@item.Branch</td>
 
         <td>
-            <a href="/AdminTeacher/DeleteTeacher/@item.TeacherId"class="btn btn-outline-danger"><i class="fa fa-trash"></i> Eğitmeni Sil</a>
+            <a href="/AdminTeacher/DeleteTeacher/@item.TeacherId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Eğitmeni Sil</a>
             <a href="/AdminTeacher/UpdateTeacher/@item.TeacherId" class="btn btn-outline-info"><i class="fa fa-pen"></i> Güncelle</a>
         </td>
     </tr>

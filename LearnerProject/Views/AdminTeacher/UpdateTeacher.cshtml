@@ -11,11 +11,17 @@
     <label>Ad - Soyad</label>
     @Html.TextBoxFor(x => x.NameSurname, new { @class = "Form-control", @placeholder = "Ad - soyad giriniz" })
     <br />
+    <label>Profil</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control", @placeholder = "Resim url giriniz" })
+    <br />
     <label>Kullanıcı Adı</label>
     @Html.TextBoxFor(x => x.UserName, new { @class = "form-control", @placeholder = "Kullanıcı adı giriniz" })
     </br>
     <label>Şifre</label>
     @Html.TextBoxFor(x => x.Password, new { @class = "form-control", @placeholder = "Şifre giriniz" })
+    <br />
+    <label>Branş</label>
+    @Html.TextBoxFor(x => x.Branch, new { @class = "form-control", @placeholder = "Branşınızı giriniz" })
     <br />
     <button class="btn btn-outline-success"><i class="fas fa-save"></i> Kaydet</button>
 </form>
