@@ -78,7 +78,6 @@ Partialview Kullanımı
 ![Learner39](https://github.com/user-attachments/assets/aad4db92-f64d-4c7b-9a6e-05c4b9aedd09)
 ![Learner40](https://github.com/user-attachments/assets/cb83056e-abcb-4f15-8f41-adf49bfebae3)
 ![Learner41](https://github.com/user-attachments/assets/918c031c-b7f9-4653-8520-58774f08a7ec)
-![Learner42](https://github.com/user-attachments/assets/d5f437ac-8544-4728-a7a5-6bf4fd025ed8)
 
 # Öğrenci Kayıt Tarafı:
 ![Learner36](https://github.com/user-attachments/assets/5de5afbf-d4b5-4d5c-9626-d688d3e4e74a)
