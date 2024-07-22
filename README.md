@@ -10,16 +10,17 @@ görüntüleyip izleyebilmektedirler. Varolan kurslara kaydolabilirler ve kursla
 - Eğitmenler de öğrenciler gibi panellerine giriş yaptıktan sonra session ile ad ataması yapılmaktadır ve kendi bilgilerini görüntüleyebilmektedir. Eğitmenler verdikleri kursları crud işlemleri ile listeleyebilmekte ve kurs içeriği ekleyebilmektedir. Aynı zamanda kurslarına gelen
 puanları ve yorumları görüntüleyip düzeltebilmektedirler.
 
-# Kullanılan Teknolojiler:
-Admin, student, teacher login sayfaları
-Student Register Paneli
-CRUD
-Session
-LogOut
-Authorize
-Linq Sorgulamaları
-Pagedlist ile sayfalama
-Partialview Kullanımı
+# Kullanılan Teknolojiler: <br/>
+
+Admin, student, teacher login sayfaları <br/>
+Student Register Paneli <br/>
+CRUD <br/>
+Session <br/>
+LogOut <br/>
+Authorize <br/>
+Linq Sorgulamaları <br/>
+Pagedlist ile sayfalama <br/>
+Partialview Kullanımı <br/> 
 
 # Projemden Kesitler: 
 
