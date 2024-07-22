@@ -22,7 +22,7 @@ namespace LearnerProject.Controllers
         {
             context.Students.Add(student);
             context.SaveChanges();
-            return RedirectToAction("Index","StudentLogin");
+            return RedirectToAction("Index", "StudentLogin");
         }
     }
 }

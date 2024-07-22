@@ -27,9 +27,10 @@
             <td>@count</td>
             <td><img src="@item.ImageUrl" style="height:50px; width:50px" /></td>
             <td>@item.Title</td>
-            <td>@(item.Description.Length>40 ? item.Description.Substring(0,40) : item.Description)</td>
             <td>@(item.Item1.Length>20 ? item.Item1.Substring(0,20) : item.Item1)</td>
-           
+            <td>@(item.Description.Length>40 ? item.Description.Substring(0,40) : item.Description)</td>
+
+
 
             <td>
                 <a href="/AdminAbout/DeleteAbout/@item.AboutId" class="btn btn-outline-danger"><i class="fa fa-trash"></i> Sil</a>
