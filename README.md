@@ -1,4 +1,4 @@
-#MY Academy Learner Project
+# MY Academy Learner Project
 - M & Y Yazılım Eğitim Akademi bünyesindeki Full Stack .Net Core Development Bootcamp'i Erhan Gündüz eğitmenliğinde 2. projem olan "LearnerProject" projesini tamamladım.
 Bu projede MVC5 teknolojileri ve codefirst yapısı kullanılmıştır. Learner bir online eğitim platformudur. İçerisinde admin, öğrenci, öğrenci kayıt, eğitmen panelleri bulunmaktadır. Panallerdeki login ve logout seçenekleri vardır ve CRUD işlemleri UI tarafına aynı anda yansımaktadır.
 
