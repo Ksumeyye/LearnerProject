@@ -4,7 +4,7 @@ Bu projede MVC5 teknolojileri ve codefirst yapısı kullanılmıştır. Learner 
 
 - Admin de tam yetki vardır. Kendi sayfasına girdikten sonra her şeye erişebilir. Eğitmen kaydı yapabilir, kurslara eğitmen atayabilir, kendi bilgilerini düzenleyebilirler.  Yeni kurs ekleyebilir ve diğer sayfaların crud işlemlerini yapabilirler.
 
-- Öğrenciler, giriş yaptıktan sonra session ile öğrenci adları ataması yapılmaktadır yapılan atamayla kendi bilgilerini de görebilmektedirler. Öğrenciler aldıkları kursların eğitmenleri tarafından eklenen kurs videolarını kurslarım kısmında kurs içeriği seçeneğine tıklayarak 
+- Öğrenciler,giriş yaptıktan sonra session ile öğrenci adları ataması yapılmaktadır yapılan atamayla kendi bilgilerini de görebilmektedirler. Öğrenciler aldıkları kursların eğitmenleri tarafından eklenen kurs videolarını kurslarım kısmında kurs içeriği seçeneğine tıklayarak 
 görüntüleyip izleyebilmektedirler. Varolan kurslara kaydolabilirler ve kurslara puan verip yorum yapabilirler. Yapılan puan ve yorumlar ilgili kursun ilgili eğitmeninin panelinde gelen yorumlar kısmından görüntülenmektedir.
 
 - Eğitmenler de öğrenciler gibi panellerine giriş yaptıktan sonra session ile ad ataması yapılmaktadır ve kendi bilgilerini görüntüleyebilmektedir. Eğitmenler verdikleri kursları crud işlemleri ile listeleyebilmekte ve kurs içeriği ekleyebilmektedir. Aynı zamanda kurslarına gelen
