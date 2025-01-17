@@ -2,7 +2,7 @@
 - M & Y Yazılım Eğitim Akademi bünyesindeki Full Stack .Net Core Development Bootcamp'i Erhan Gündüz eğitmenliğinde 2.projem olan "LearnerProject" projesini tamamladım.
 Bu projede MVC5 teknolojileri ve codefirst yapısı kullanılmıştır. Learner bir online eğitim platformudur. İçerisinde admin, öğrenci, öğrenci kayıt, eğitmen panelleri bulunmaktadır. Panallerdeki login ve logout seçenekleri vardır ve CRUD İşlemleri UI tarafına aynı anda yansımaktadır.
 
-- Admin de tam yetki vardır.Kendi sayfasına girdikten sonra her şeye erişebilir. Eğitmen kaydı yapabilir, kurslara eğitmen atayabilir,kendi bilgilerini düzenleyebilirler.  Yeni kurs ekleyebilir ve diğer sayfaların crud işlemlerini yapabilirler.
+- Admin de tam yetki vardır.Kendi sayfasına girdikten sonra her şeye erişebilir. Eğitmen kaydı yapabilir, kurslara eğitmen atayabilir, kendi bilgilerini düzenleyebilirler.  Yeni kurs ekleyebilir ve diğer sayfaların crud işlemlerini yapabilirler.
 
 - Öğrenciler,giriş yaptıktan sonra session ile öğrenci adları ataması yapılmaktadır yapılan atamayla kendi bilgilerini de görebilmektedirler. Öğrenciler aldıkları kursların eğitmenleri tarafından eklenen kurs videolarını kurslarım kısmında kurs içeriği seçeneğine tıklayarak 
 görüntüleyip izleyebilmektedirler. Varolan kurslara kaydolabilirler ve kurslara puan verip yorum yapabilirler. Yapılan puan ve yorumlar ilgili kursun ilgili eğitmeninin panelinde gelen yorumlar kısmından görüntülenmektedir.
